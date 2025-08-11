@@ -1,169 +1,106 @@
-
-
-
-	
-	
-	
-	
-
-
-
 # Student Management System
 
-
-A command-line Python application
-demonstrating core CRUD (Create, Read, Update, Delete) operations
-with SQLite.  Designed as a beginner-friendly project to showcase
-database integration, Python programming, and software design skills.
-
+A simple Python-based Student Management System demonstrating basic CRUD operations with a SQLite database, wrapped in a user-friendly Tkinter GUI.  
 
 ---
-
 
 ## Features
 
-
-- Add, view, update, and delete
-student records  
-
-- Simple text-based menu interface for easy
-interaction  
-
-- Data persistence using SQLite database  
-
-
+- User authentication (hardcoded username and password)  
+- Add, view, update, and delete student records  
+- Simple and intuitive graphical interface using Tkinter  
+- Backend and frontend code modularized for easy maintenance
 
 ---
-
-
-## Technologies
-
-
-- Python 3  
-
-- SQLite (Python's
-built-in database module)  
-
-
-
----
-
 
 ## Getting Started
 
-
 ### Prerequisites
 
+- Python 3.x  
+- Tkinter (usually included with Python)  
+- SQLite (built-in with Python)  
 
-- Python 3.x installed on your
-system  
+### Setup
 
-- (Optional) Git for cloning the repository
+1. Clone or download the repository.
 
----
+2. Ensure both `backend.py` and `gui.py` are in the same folder.
 
-## Setup & Run
-
-### Easy option : 
-
-1. Clone the repository (or download the code).  
-2. Open the project folder in your preferred Python IDE (e.g., PyCharm, VSCode).  
-3. Run the `main.py` file.  
-4. Follow the on-screen menu to add, view, update, or delete student records.
-
- ### Another option :
-
-1. **Clone the repository** 
-
+3. Run the GUI application:
 
 ```bash
+python3 gui.py
+```
+## Usage
 
-git clone
-https://github.com/YOUR_USERNAME/YOUR_REPO.git
+### Login
 
+**Username**: 
+```
+admin
 ```
 
-
-2. **Navigate to the project
-directory**  
-
-```bash
-
-cd YOUR_REPO
-
+**Password**: 
+```
+password123
 ```
 
-
-3. **Run the application** 
-
-
-```bash
-
-python3 main.py
-
+```
+Note:
+The username and password are hardcoded for learning purposes, please use them for logging in the app.
 ```
 
-
-4. **Follow the on-screen prompts**
-to manage student records via the menu.
+## Main Application
 
 
----
-
-
-## Usage Example
-
-
-📌 Student Management System  
-
-1. Add Student  
-
-2. View Students  
-
-3. Update Student  
-
-4. Delete Student  
-
-5. Exit  
+Once logged in, you can:
 
 
 
-Choose an option:
 
+1. **Add Student**: Enter name, age, and course details in a popup form.
 
----
+2. **View Students**: See a table of all student records with ID, Name, Age, and Course columns.
 
+3. **Update Student**: Modify existing student information by entering the student ID and new details.
 
-## Why This Project?
+4. **Delete Student**: Remove a student record by entering the student ID.
 
-
-This project demonstrates your
-ability to:  
-
-- Write clean, modular Python code  
-
-- Interact with a relational database using SQL  
-
-- Implement
-essential CRUD operations  
-
-- Build user-friendly CLI
-applications  
+5. Use the **Logout** button to return to the login screen.
 
 
 
----
+
+## Code Structure
+
+- **backend.py**:  Handles database creation, user authentication, and all CRUD operations with SQLite.
+
+- **gui.py**:  Implements the Tkinter GUI, connects user interactions to backend functions.
+
+
+
+
+
+## Future Improvements
+
+
+- Replace hardcoded credentials with database-stored users and password hashing.
+
+- Add user registration and password recovery.
+
+- Improve GUI styling and usability.
+
+- Add data export/import features.
+
 
 
 ## License
 
 
-Feel free to use and
-modify.
-
+This project is for educational purposes and free to use.
 
 ---
 
+Feel free to open issues or contribute improvements!
 
-*Built by mercuryafk — BCA Data
-Science Student from SRM Institute of Science and Technology*
