@@ -39,6 +39,7 @@ class StudentManagementApp:
         self.root.title("Student Management System")
 
         tk.Label(self.root, text="Welcome to Student Management System", font=("Arial", 14)).pack(pady=10)
+        tk.Label(self.root, text="by mercuryafk").pack(pady=(10,5))
 
         btn_frame = tk.Frame(self.root)
         btn_frame.pack(pady=10)
