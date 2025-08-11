@@ -23,15 +23,10 @@ A simple Python-based Student Management System demonstrating basic CRUD operati
 
 ### Setup
 
-1. Clone or download the repository.
+1. Download ```gui.exe``` from the repository (on windows, mac app coming soon!)
 
-2. Ensure both `backend.py` and `gui.py` are in the same folder.
+2. Run the GUI application!
 
-3. Run the GUI application:
-
-```bash
-python3 gui.py
-```
 ## Usage
 
 ### Login
