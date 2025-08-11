@@ -6,7 +6,7 @@ class StudentManagementApp:
     def __init__(self, root):
         self.root = root
         self.root.title("Student Management System - Login")
-        self.root.geometry("300x180")
+        self.root.geometry("400x350")
         backend.create_table()
 
         self.build_login_screen()
@@ -38,8 +38,8 @@ class StudentManagementApp:
             widget.destroy()
         self.root.title("Student Management System")
 
-        tk.Label(self.root, text="Welcome to Student Management System", font=("Arial", 14)).pack(pady=10)
-        tk.Label(self.root, text="by mercuryafk").pack(pady=(10,5))
+        tk.Label(self.root, text="Student Management System", font=("Ubuntu", 14)).pack(pady=10)
+        tk.Label(self.root, text="by mercuryafk").pack(pady=(10))
 
         btn_frame = tk.Frame(self.root)
         btn_frame.pack(pady=10)
@@ -72,8 +72,7 @@ class StudentManagementApp:
             course = entry_course.get().strip()
             if not name or not age.isdigit() or not course:
                 messagebox.showerror("Input Error", "Please enter valid data.")
-                return
-            backend.add_student(name, int(age), course)
+                return            backend.add_student(name, int(age), course)
             messagebox.showinfo("Success", f"Student '{name}' added.")
             dialog.destroy()
 
@@ -92,8 +91,7 @@ class StudentManagementApp:
 
         tree.pack(fill="both", expand=True)
 
-        # Clear existing rows if any (just in case)
-        for row in tree.get_children():
+        # Clear existing rows if any (just in case)        for row in tree.get_children():
             tree.delete(row)
 
         for student in backend.view_students():
@@ -127,12 +125,9 @@ class StudentManagementApp:
 
             if not student_id.isdigit():
                 messagebox.showerror("Input Error", "Student ID must be a number.")
-                return
-            if not name or not age.isdigit() or not course:
+                return            if not name or not age.isdigit() or not course:
                 messagebox.showerror("Input Error", "Please enter valid data.")
-                return
-
-            backend.update_student(int(student_id), name, int(age), course)
+                return            backend.update_student(int(student_id), name, int(age), course)
             messagebox.showinfo("Success", "Student updated successfully.")
             dialog.destroy()
 
@@ -150,8 +145,7 @@ class StudentManagementApp:
             student_id = entry_id.get().strip()
             if not student_id.isdigit():
                 messagebox.showerror("Input Error", "Student ID must be a number.")
-                return
-            backend.delete_student(int(student_id))
+                return            backend.delete_student(int(student_id))
             messagebox.showinfo("Success", "Student deleted successfully.")
             dialog.destroy()
 
@@ -159,7 +153,7 @@ class StudentManagementApp:
 
     def logout(self):
         self.root.title("Student Management System - Login")
-        self.root.geometry("300x180")
+        self.root.geometry("400x350")
         self.build_login_screen()
 
 if __name__ == "__main__":
