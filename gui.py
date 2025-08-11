@@ -38,7 +38,7 @@ class StudentManagementApp:
             widget.destroy()
         self.root.title("Student Management System")
 
-        tk.Label(self.root, text="Student Management System", font=("Ubuntu", 14)).pack(pady=10)
+        tk.Label(self.root, text="Student Management System", font=("Arial", 14, "bold")).pack(pady=10)
         tk.Label(self.root, text="by Umesh K").pack(pady=(10))
 
         btn_frame = tk.Frame(self.root)
