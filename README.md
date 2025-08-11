@@ -43,7 +43,7 @@ admin
 
 **Password**: 
 ```
-password123
+123
 ```
 
 ```
